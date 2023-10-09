@@ -1,11 +1,11 @@
-# GIT-Training 
+# GIT-Training (tortoise git)
 
 ## Agenda 
 
   1. Geschichte / Grundlagen 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
      
-  1. Commands (with tipps & tricks) 
+  1. Commands git (with tipps & tricks) 
      * [git alias ](alias.md) 
      * [git add + Tipps & Tricks](add.md)
      * [git commit](commit.md)
@@ -67,6 +67,9 @@
    
   1. Authentication 
      * [Work with different credentials](credential-helper.md)
+
+  1. Tortoise - Documentation
+     * https://tortoisegit.org/docs/tortoisegit
    
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf) 
@@ -79,17 +82,16 @@
      * https://www.innoq.com/de/talks/2019/05/commit-message-101/
      * https://github.com/GitAlias/gitalias/blob/main/gitalias.txt
      * https://education.github.com/git-cheat-sheet-education.pdf
-
-  1. Integrations 
-     * https://docs.gitlab.com/ee/integration/jira/
-
-  1. GUIs
-     * [git extensions gui](/gui/git-extensions.md)
-     * [gui uebersicht](https://git-scm.com/downloads/guis)
-     
+    
 ## Backlog  
 
   1. Installation 
      * [GIT auf Ubuntu/Debian installieren](installation-ubuntu-debian.md)
      * [GIT unter Windows installieren](https://git-scm.com/download/win)
-  
+
+  1. Integrations (git) 
+     * https://docs.gitlab.com/ee/integration/jira/
+
+  1. Other GUIs
+     * [git extensions gui](/gui/git-extensions.md)
+     * [gui uebersicht](https://git-scm.com/downloads/guis)
