@@ -39,7 +39,7 @@
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](no-automerging.md)
     
-  !. Editoren konfigurieren 
+  1. Editoren konfigurieren 
      * [Notepad++](notepad%2B%2B.md)
   
   1. Exercises 
