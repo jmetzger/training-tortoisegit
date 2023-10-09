@@ -40,7 +40,7 @@
      * [No automerging - please](no-automerging.md)
     
   1. Editoren konfigurieren 
-     * [Notepad++](notepad%2B%2B.md)
+     * [Notepad++](editor/notepad%2B%2B.md)
   
   1. Exercises 
      * [merge feature/4712 - conflict](merge-conflict.md)
