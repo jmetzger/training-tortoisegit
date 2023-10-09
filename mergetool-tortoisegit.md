@@ -11,8 +11,8 @@ git mergetool --tool-help
 
 ```
 # you have to be in a git project 
-git config --global merge.tool tortoisegit
-git config --global diff.tool tortoisegit
+git config --global merge.tool tortoisemerge
+git config --global diff.tool tortoisemerge
 git config --global mergetool.keepBackup false
 git config --list
 ```
