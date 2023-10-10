@@ -31,7 +31,7 @@
      * [Always rebase on pull - setting](rebase-pull.md)
      * [Arbeit mit submodules](submodules.md) 
      * [Integration von Änderungen (commits, einzelne Dateien) aus anderen commits in den Master](integrate-to-master.md)
-     * [Fix conflict you have in merge-request (gitlab)](fix-conflict-merge-request.md) 
+     * [ conflict you have in merge-request (gitlab)](-conflict-merge-request.md) 
      * [SETUP.sql zu setup.sql in Windows (Groß- und Kleinschreibung)](setup-SETUP_sql.md)
      * [Force specfic commit message](pre-receive-hook.md)
      * [Alle Dateien, die sich geändert haben anzeigen z.B. heute](files-changed-today.md)
@@ -77,6 +77,7 @@
   1. Remote in Teams arbeiten
      * [Workflows](workflows.md)
      * [Branches and Onlinebranches](branches-online-branches.md)
+     * [Fix conflict in pull-request - gitlab](fix-conflict-merge-request.md)
    
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf) 
