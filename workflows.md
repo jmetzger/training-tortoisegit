@@ -1,5 +1,7 @@
 # Workflows 
 
+## Centralized Workflows
+
 ![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/e01cec1a-8f8d-4c77-ad6b-1094c2dc97f9)
 
 ![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/938c03e8-cbad-464f-a057-ec67573496b8)
