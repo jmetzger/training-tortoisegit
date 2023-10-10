@@ -73,6 +73,10 @@
 
   1. Tortoise - Documentation
      * https://tortoisegit.org/docs/tortoisegit
+    
+  1. Remote in Teams arbeiten
+     * [Workflows](workflows.md)
+     * [Branches and Onlinebranches](branches-remote-branches.md)
    
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf) 
