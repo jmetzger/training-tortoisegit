@@ -13,6 +13,7 @@ git fetch --prune
 
 # 3. Switch to master or main (depending on what you master branch is) 
 git checkout master
+git pull --rebase 
 
 # 4. Delete local branch 
 git branch -d feature/4811
