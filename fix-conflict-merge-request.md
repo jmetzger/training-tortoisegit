@@ -4,7 +4,7 @@
 
 ```
 # create feature-branch and worked on it 
-git checkout -b feautre/4711 
+git checkout -b feature/4711 
 # ... changes
 git add .; git commit -am "new feature"
 # pushed branch online
