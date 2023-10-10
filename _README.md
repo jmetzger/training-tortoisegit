@@ -1,11 +1,11 @@
-# GIT-Training 
+# GIT-Training (tortoise git)
 
 
 ## Agenda
   1. Geschichte / Grundlagen 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
      
-  1. Commands (with tipps & tricks) 
+  1. Commands git (with tipps & tricks) 
      * [git alias ](#git-alias-)
      * [git add + Tipps & Tricks](#git-add-+-tipps--tricks)
      * [git commit](#git-commit)
@@ -31,13 +31,16 @@
      * [Always rebase on pull - setting](#always-rebase-on-pull---setting)
      * [Arbeit mit submodules](#arbeit-mit-submodules)
      * [Integration von Änderungen (commits, einzelne Dateien) aus anderen commits in den Master](#integration-von-änderungen-commits-einzelne-dateien-aus-anderen-commits-in-den-master)
-     * [Fix conflict you have in merge-request (gitlab)](#fix-conflict-you-have-in-merge-request-gitlab)
+     * [conflict you have in merge-request (gitlab)](#conflict-you-have-in-merge-request-gitlab)
      * [SETUP.sql zu setup.sql in Windows (Groß- und Kleinschreibung)](#setupsql-zu-setupsql-in-windows-groß--und-kleinschreibung)
      * [Force specfic commit message](#force-specfic-commit-message)
      * [Alle Dateien, die sich geändert haben anzeigen z.B. heute](#alle-dateien-die-sich-geändert-haben-anzeigen-zb-heute)
   
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](#no-automerging---please)
+    
+  1. Editoren konfigurieren 
+     * [Notepad++](#notepad++)
   
   1. Exercises 
      * [merge feature/4712 - conflict](#merge-feature4712---conflict)
@@ -67,6 +70,14 @@
    
   1. Authentication 
      * [Work with different credentials](#work-with-different-credentials)
+
+  1. Tortoise - Documentation
+     * https://tortoisegit.org/docs/tortoisegit
+    
+  1. Remote in Teams arbeiten
+     * [Workflows](#workflows)
+     * [Branches and Onlinebranches](#branches-and-onlinebranches)
+     * [Fix conflict in pull-request - gitlab](#fix-conflict-in-pull-request---gitlab)
    
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
@@ -79,20 +90,19 @@
      * https://www.innoq.com/de/talks/2019/05/commit-message-101/
      * https://github.com/GitAlias/gitalias/blob/main/gitalias.txt
      * https://education.github.com/git-cheat-sheet-education.pdf
-
-  1. Integrations 
-     * https://docs.gitlab.com/ee/integration/jira/
-
-  1. GUIs
-     * [git extensions gui](#git-extensions-gui)
-     * [gui uebersicht](https://git-scm.com/downloads/guis)
-     
+    
 ## Backlog  
 
   1. Installation 
      * [GIT auf Ubuntu/Debian installieren](#git-auf-ubuntudebian-installieren)
      * [GIT unter Windows installieren](https://git-scm.com/download/win)
-  
+
+  1. Integrations (git) 
+     * https://docs.gitlab.com/ee/integration/jira/
+
+  1. Other GUIs
+     * [git extensions gui](#git-extensions-gui)
+     * [gui uebersicht](https://git-scm.com/downloads/guis)
 
 <div class="page-break"></div>
 
@@ -102,7 +112,7 @@
 
   * http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
 
-## Commands (with tipps & tricks) 
+## Commands git (with tipps & tricks) 
 
 ### git alias 
 
@@ -443,6 +453,7 @@ git fetch --prune
 
 ## 3. Switch to master or main (depending on what you master branch is) 
 git checkout master
+git pull --rebase 
 
 ## 4. Delete local branch 
 git branch -d feature/4811
@@ -575,39 +586,7 @@ git push -u origin integrate/1
 ## und dann mergen online 
 ```
 
-### Fix conflict you have in merge-request (gitlab)
-
-
-### Walkthrough 
-
-```
-## create feature-branch and worked on it 
-git checkout -b feautre/4711 
-## ... changes
-git add .; git commit -am "new feature"
-## pushed branch online
-git push -u origin feature/4711 
-## then created merge online 
-## feature/4711 --> master 
-
-###### TaDa - It was NOT possible to merge because of conflict 
-## unfortunately advice on gitlab/bitbucket is not worth the dime 
-
-## locally, update you feature-branch like so
-## NO git pull --rebase please, otherwice, you have to redo you merge_request afterwards 
-## get changes from master 
-git pull origin master
-
-## fix conflicts 
-git add . 
-git commit 
-
-## push new version of feature - branch online
-git push 
-
-## now you can merge in the merge-request interface on gitlab 
-
-```
+### conflict you have in merge-request (gitlab)
 
 ### SETUP.sql zu setup.sql in Windows (Groß- und Kleinschreibung)
 
@@ -691,6 +670,10 @@ git diff HEAD
 ## Oder schön mit difftool (wenn konfiguriert) 
 git difftool HEAD 
 ```
+
+## Editoren konfigurieren 
+
+### Notepad++
 
 ## Exercises 
 
@@ -1381,6 +1364,66 @@ git commit -am "removed submodules"
 
 https://de.linkedin.com/pulse/mehrere-gitlabgithub-accounts-bzw-ssh-keys-zum-host-mit-mindermann
 
+## Tortoise - Documentation
+
+## Remote in Teams arbeiten
+
+### Workflows
+
+
+### Centralized Workflows
+
+![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/938c03e8-cbad-464f-a057-ec67573496b8)
+
+### feature workflow 
+
+![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/e01cec1a-8f8d-4c77-ad6b-1094c2dc97f9)
+
+### gitflow workflow 
+
+![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/1bc82b85-0ef7-4f6f-8e31-8c0b6c9370aa)
+
+
+
+### Branches and Onlinebranches
+
+
+![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/877a00f7-9501-4e52-94d0-dade943b59f9)
+
+### Fix conflict in pull-request - gitlab
+
+
+### Walkthrough 
+
+```
+## create feature-branch and worked on it 
+git checkout -b feature/4711 
+## ... changes
+git add .; git commit -am "new feature"
+## pushed branch online
+git push -u origin feature/4711 
+## then created merge online 
+## feature/4711 --> master 
+
+###### TaDa - It was NOT possible to merge because of conflict 
+## unfortunately advice on gitlab/bitbucket is not worth the dime 
+
+## locally, update you feature-branch like so
+## NO git pull --rebase please, otherwice, you have to redo you merge_request afterwards 
+## get changes from master 
+git pull origin master
+
+## fix conflicts 
+git add . 
+git commit 
+
+## push new version of feature - branch online
+git push 
+
+## now you can merge in the merge-request interface on gitlab 
+
+```
+
 ## Documentation 
 
 ### GIT Pdf
@@ -1426,21 +1469,6 @@ https://de.linkedin.com/pulse/mehrere-gitlabgithub-accounts-bzw-ssh-keys-zum-hos
 
   * https://www.conventionalcommits.org/en/v1.0.0/
 
-## Integrations 
-
-## GUIs
-
-### git extensions gui
-
-
-### Installation
-
- * http://gitextensions.github.io/
-
-### gui uebersicht
-
-  * https://git-scm.com/downloads/guis
-
 ## Installation 
 
 ### GIT auf Ubuntu/Debian installieren
@@ -1476,3 +1504,18 @@ LANG=en_US.UTF-8
 ### GIT unter Windows installieren
 
   * https://git-scm.com/download/win
+
+## Integrations (git) 
+
+## Other GUIs
+
+### git extensions gui
+
+
+### Installation
+
+ * http://gitextensions.github.io/
+
+### gui uebersicht
+
+  * https://git-scm.com/downloads/guis
