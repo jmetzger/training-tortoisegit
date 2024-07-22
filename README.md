@@ -5,8 +5,9 @@
   1. Geschichte / Grundlagen 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
     
-  1. Installation (tortoisegit)
+  1. Installation / Nutzung (tortoisegit)
      * [Installation tortoisegit](tortoisegit/installation.md)
+     * [Neues Repo einrichten](tortoisegit/new-repo.md)
      
   1. Commands git (with tipps & tricks) 
      * [git alias ](alias.md) 
