@@ -16,3 +16,8 @@ https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi
 
 
 ```
+
+### Schritt 2: Installation 
+
+  * Die Pakete 1 bis 4 einfach durchklicken
+  * Ausser: Tortoisegit, bei Editor, Editor angeben 
