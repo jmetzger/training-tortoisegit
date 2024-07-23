@@ -50,7 +50,7 @@
   1. Exercises 
      * [merge feature/4712 - conflict](merge-conflict.md)
      * [merge request with bitbucket](merge-request.md)
-     * [merge request bitbucket with conflict](/bitbucket/merge-request-conflict.md)
+     * [merge request bitbucket with conflict - KOCHREZEPT](/bitbucket/merge-request-conflict.md)
      * [Exercise with cherry-picking](/exercises/cherry-pick.md)
      * [Gruppenarbeit-bitbucket-ohne-konflikt](/exercises/group/bitbucket-no-conflict.md)
      * [Gruppenarbeit bitbucket mit Konflikt](/exercises/group/bitbucket-conflict.md)
