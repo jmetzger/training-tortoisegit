@@ -61,9 +61,8 @@ git push
 ## Cleanup locally 
 
 ```
-git fetch --prune
 git checkout master
+git pull --prune master 
 git branch -D feature/5021
-git pull --rebase
 ```
 
