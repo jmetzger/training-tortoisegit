@@ -4,6 +4,11 @@
 ## Agenda
   1. Geschichte / Grundlagen 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+    
+  1. Installation / Nutzung (tortoisegit)
+     * [Installation tortoisegit](#installation-tortoisegit)
+     * [Neues Repo einrichten](#neues-repo-einrichten)
+     * [tortoisemerge für git bash einrichten](#tortoisemerge-für-git-bash-einrichten)
      
   1. Commands git (with tipps & tricks) 
      * [git alias ](#git-alias-)
@@ -45,7 +50,7 @@
   1. Exercises 
      * [merge feature/4712 - conflict](#merge-feature4712---conflict)
      * [merge request with bitbucket](#merge-request-with-bitbucket)
-     * [merge request bitbucket with conflict](#merge-request-bitbucket-with-conflict)
+     * [merge request bitbucket with conflict - KOCHREZEPT](#merge-request-bitbucket-with-conflict---kochrezept)
      * [Exercise with cherry-picking](#exercise-with-cherry-picking)
      * [Gruppenarbeit-bitbucket-ohne-konflikt](#gruppenarbeit-bitbucket-ohne-konflikt)
      * [Gruppenarbeit bitbucket mit Konflikt](#gruppenarbeit-bitbucket-mit-konflikt)
@@ -111,6 +116,72 @@
 ### GIT Pdf
 
   * http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
+
+## Installation / Nutzung (tortoisegit)
+
+### Installation tortoisegit
+
+
+### Reihenfolge 
+
+#### Schritt 1: Runterladen
+
+```
+1. Notepad++
+https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.6.9/npp.8.6.9.Installer.x64.exe
+2 git for windows 
+https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe
+3. Lanugage Pack tortoisegit (deutsch)
+https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-LanguagePack-2.16.0.0-64bit-de.msi
+4. Tortoisegit 
+https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi
+
+
+```
+
+#### Schritt 2: Installation 
+
+  * Die Pakete 1 bis 4 einfach durchklicken
+  * Ausser: Tortoisegit, bei Editor, Editor angeben 
+
+### Neues Repo einrichten
+
+
+![image](https://github.com/user-attachments/assets/117d2f69-0527-42c8-ac24-73d1d25f0ef0)
+
+### Keinen Haken setzen --> (nur für Server) 
+
+![image](https://github.com/user-attachments/assets/41cb0aec-62f8-461d-b413-bac8e4e29fb3)
+
+
+![image](https://github.com/user-attachments/assets/111de45d-cc7d-41ff-aefb-c3fe4c987be5)
+
+### tortoisemerge für git bash einrichten
+
+
+### Find out if mergetool TortoiseMerge is available 
+
+```
+## tortoisegit is already installed 
+git mergetool --tool-help
+```
+
+### Configure, when it is found by mergetool --tool-help 
+
+```
+## you have to be in a git project 
+git config --global merge.tool tortoisemerge
+git config --global diff.tool tortoisemerge
+git config --global mergetool.keepBackup false
+git config --list
+```
+
+### How to use it 
+
+```
+## when you have conflict you can open the mergetool (graphical tool with )
+git mergetool
+```
 
 ## Commands git (with tipps & tricks) 
 
@@ -731,7 +802,7 @@ git pull --rebase
 ```
 
 
-### merge request bitbucket with conflict
+### merge request bitbucket with conflict - KOCHREZEPT
 
   
 ```  
@@ -795,10 +866,9 @@ git push
 ### Cleanup locally 
 
 ```
-git fetch --prune
 git checkout master
+git pull --prune master 
 git branch -D feature/5021
-git pull --rebase
 ```
 
 
@@ -1382,7 +1452,7 @@ https://de.linkedin.com/pulse/mehrere-gitlabgithub-accounts-bzw-ssh-keys-zum-hos
 ### gitflow workflow 
 
 ![image](https://github.com/jmetzger/training-tortoisegit/assets/1933318/1bc82b85-0ef7-4f6f-8e31-8c0b6c9370aa)
-
+![image](assets/1933318/1bc82b85-0ef7-4f6f-8e31-8c0b6c9370aa)
 
 
 ### Branches and Onlinebranches
