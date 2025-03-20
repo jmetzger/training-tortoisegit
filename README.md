@@ -59,10 +59,14 @@
      * [publish lokal repo to server - bitbucket](local-public.md)
      * [failure-on-push-fix](failure-push.md)
      * [failure-on-push-with-conflict](failure-push-conflict.md)
+
+  1. Mergetool
+     * [Using a mergetool to solve conflicts](mergetools.md)
+     * [Using tortoisegit as a mergetool to solve conflicts](mergetools-tortoisegit.md)
+      
      
   1. Extras 
      * [Best practices](bp.md) 
-     * [Using a mergetool to solve conflicts](mergetools.md)
      * [Overview GIT-Servers](git-server.md)
      * [4 goldene Regeln](goldene-regeln.md)
   
