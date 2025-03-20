@@ -62,11 +62,11 @@
 
   1. Mergetool
      * [Using a mergetool to solve conflicts](mergetools.md)
-     * [Using tortoisegit as a mergetool to solve conflicts](mergetools-tortoisegit.md)
+     * [Using tortoisegit as a mergetool to solve conflicts](mergetools/tortoisemerge.md)
       
      
   1. Extras 
-     * [Best practices](bp.md) 
+     * [Best practices](bp.md)
      * [Overview GIT-Servers](git-server.md)
      * [4 goldene Regeln](goldene-regeln.md)
   
