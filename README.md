@@ -87,6 +87,9 @@
      * [Workflows](workflows.md)
      * [Branches and Onlinebranches](branches-online-branches.md)
      * [Fix conflict in pull-request - gitlab](fix-conflict-merge-request.md)
+
+  1. Documentation - .gitignore
+     * [List for different programming lanuages](https://github.com/github/gitignore)
    
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf) 
