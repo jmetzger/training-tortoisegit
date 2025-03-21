@@ -94,7 +94,10 @@
 
   1. Documentation - .gitignore
      * [List for different programming lanuages](https://github.com/github/gitignore)
-   
+
+  1. Documentation - permissions
+     * [Permissions](https://docs.gitlab.com/user/permissions/)
+  
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf) 
      * [GIT Book EN](https://git-scm.com/book/en/v2)
