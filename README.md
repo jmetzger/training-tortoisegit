@@ -116,4 +116,4 @@
      * [git extensions gui](/gui/git-extensions.md)
      * [gui uebersicht](https://git-scm.com/downloads/guis)
     
-  1. testing submodules 
+  1. testing submodules (v2)
