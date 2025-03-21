@@ -44,7 +44,8 @@
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](no-automerging.md)
     
-  1. Editoren konfigurieren 
+  1. Editoren / Editoren konfigurieren
+     * [Editoren RapiOS bzw. Raspian](editor/for-raspios.md)
      * [Notepad++](editor/notepad%2B%2B.md)
   
   1. Exercises 
