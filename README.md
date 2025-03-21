@@ -76,6 +76,9 @@
   1. subtrees / submodules 
      * [substrees](subtree.md)
      * [submodules](submodules.md)
+
+  1. submodules in tortoisegit
+     * [submodules in tortoisegit](submodules-tortoisegit.md)
    
   1. Authentication 
      * [Work with different credentials](credential-helper.md)
