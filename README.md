@@ -43,7 +43,10 @@
   
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](no-automerging.md)
-    
+
+  1. Tipps & Tricks (.gitignore)
+     * [Exercise: fix already committed files for .gitignore](exercises/fix-ignore-file-when-already-committed.md)
+  
   1. Editoren / Editoren konfigurieren
      * [Editoren RapiOS bzw. Raspian](editor/for-raspios.md)
      * [Notepad++](editor/notepad%2B%2B.md)
