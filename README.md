@@ -45,6 +45,9 @@
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](no-automerging.md)
 
+  1. Tipps & Tricks (Tags)
+     * [Delete Tags being delete online also locally](tags/delete-online-deleted-tags-locally.md)
+
   1. Tipps & Tricks (.gitignore)
      * [Exercise: fix already committed files for .gitignore](exercises/fix-ignore-file-when-already-committed.md)
   
