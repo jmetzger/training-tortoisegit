@@ -9,6 +9,7 @@
      * [Installation tortoisegit](tortoisegit/installation.md)
      * [Neues Repo einrichten](tortoisegit/new-repo.md)
      * [tortoisemerge für git bash einrichten](mergetool-tortoisegit.md)
+     * [Fehlende Icons anzeigen - FIX](tortoisegit/fehlende-icons-anzeigen.md)
      
   1. Commands git (with tipps & tricks) 
      * [git alias ](alias.md) 
