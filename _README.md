@@ -9,6 +9,7 @@
      * [Installation tortoisegit](#installation-tortoisegit)
      * [Neues Repo einrichten](#neues-repo-einrichten)
      * [tortoisemerge für git bash einrichten](#tortoisemerge-für-git-bash-einrichten)
+     * [Fehlende Icons anzeigen - FIX](#fehlende-icons-anzeigen---fix)
      
   1. Commands git (with tipps & tricks) 
      * [git alias ](#git-alias-)
@@ -43,8 +44,12 @@
   
   1. Tipps & Tricks (Mergen) 
      * [No automerging - please](#no-automerging---please)
-    
-  1. Editoren konfigurieren 
+
+  1. Tipps & Tricks (.gitignore)
+     * [Exercise: fix already committed files for .gitignore](#exercise-fix-already-committed-files-for-gitignore)
+  
+  1. Editoren / Editoren konfigurieren
+     * [Editoren RapiOS bzw. Raspian](#editoren-rapios-bzw-raspian)
      * [Notepad++](#notepad++)
   
   1. Exercises 
@@ -59,10 +64,14 @@
      * [publish lokal repo to server - bitbucket](#publish-lokal-repo-to-server---bitbucket)
      * [failure-on-push-fix](#failure-on-push-fix)
      * [failure-on-push-with-conflict](#failure-on-push-with-conflict)
+
+  1. Mergetool
+     * [Using a mergetool to solve conflicts](#using-a-mergetool-to-solve-conflicts)
+     * [Using tortoisegit as a mergetool to solve conflicts](#using-tortoisegit-as-a-mergetool-to-solve-conflicts)
+      
      
   1. Extras 
      * [Best practices](#best-practices)
-     * [Using a mergetool to solve conflicts](#using-a-mergetool-to-solve-conflicts)
      * [Overview GIT-Servers](#overview-git-servers)
      * [4 goldene Regeln](#4-goldene-regeln)
   
@@ -72,6 +81,9 @@
   1. subtrees / submodules 
      * [substrees](#substrees)
      * [submodules](#submodules)
+
+  1. submodules in tortoisegit
+     * [submodules in tortoisegit](#submodules-in-tortoisegit)
    
   1. Authentication 
      * [Work with different credentials](#work-with-different-credentials)
@@ -83,7 +95,13 @@
      * [Workflows](#workflows)
      * [Branches and Onlinebranches](#branches-and-onlinebranches)
      * [Fix conflict in pull-request - gitlab](#fix-conflict-in-pull-request---gitlab)
-   
+
+  1. Documentation - .gitignore
+     * [List for different programming lanuages](https://github.com/github/gitignore)
+
+  1. Documentation - permissions
+     * [Permissions](https://docs.gitlab.com/user/permissions/)
+  
   1. Documentation 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
      * [GIT Book EN](https://git-scm.com/book/en/v2)
@@ -108,6 +126,8 @@
   1. Other GUIs
      * [git extensions gui](#git-extensions-gui)
      * [gui uebersicht](https://git-scm.com/downloads/guis)
+    
+  1. testing submodules (v2)
 
 <div class="page-break"></div>
 
@@ -147,9 +167,15 @@ https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi
 ### Neues Repo einrichten
 
 
+### Step 1: Create folder for projects or use given folder 
+
+  * training (auf dem Desktop)
+
+### Step 2: 
+
 ![image](https://github.com/user-attachments/assets/117d2f69-0527-42c8-ac24-73d1d25f0ef0)
 
-### Keinen Haken setzen --> (nur für Server) 
+### Step 3: Keinen Haken setzen --> (nur für Server) 
 
 ![image](https://github.com/user-attachments/assets/41cb0aec-62f8-461d-b413-bac8e4e29fb3)
 
@@ -183,10 +209,38 @@ git config --list
 git mergetool
 ```
 
+### Fehlende Icons anzeigen - FIX
+
+
+### Walkthrough 
+
+```
+Schritt 1: 
+Registrierungseditor öffnen 
+
+Schritt 2:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
+Alle Einträge von Tortoise durch umbenennen (mehrere Leerzeichen davorstellen) 
+
+Schritt 3: 
+Task-Manager öffnen und Windows - Explorer neu starten 
+CTRL + SHIFT + ESC 
+
+
+Hinweise 
+https://stackoverflow.com/questions/25156238/tortoisegit-not-showing-icon-overlays
+```
+
 ## Commands git (with tipps & tricks) 
 
 ### git alias 
 
+
+```
+git config --global alias.cc 'commit'
+```
+
+### Special Alias (multiple commands) -
 
 ```
 git config --global alias.sl '!git log --oneline -2 && git status'
@@ -742,7 +796,86 @@ git diff HEAD
 git difftool HEAD 
 ```
 
-## Editoren konfigurieren 
+## Tipps & Tricks (.gitignore)
+
+### Exercise: fix already committed files for .gitignore
+
+
+  * Want to ignore them
+
+### Steps Overview 
+
+  1. Delete files/Folder from Repo
+  2. Add files/folder  to .gitignore
+  3. (Push to server)
+  4. (All people in the team, pull new .gitignore)
+
+### Exercise 
+
+### Step 1 Ordner mit objekt-file in repo packen (Sorry ! Versehentlich) 
+
+```
+1. wie legen einen debug ordner an 
+2. und in dem debug-ordner packen wie 3 objekt. 
+
+datei1.obj
+datei2.obj
+datei3.obj 
+
+3. add + commit -> tortoisegit -> commit 
+```
+
+#### Step 2 .gitignore 
+
+```
+-> dateien rauslöschen aus repo durch anklicken ordner
+1. Datei aus dem Ordner auf dem Repo löschen (delete) 
+auf den ordner debug rechte Maustaste ( TortoiseGIT /  Delete)
+
+2. commit -> master 
+uncheck all 
+und nur die delete einträge anhaken
+
+3. commit - button 
+
+--> ab sofort nicht mehr erfassen von git 
+
+4. Ordner ignorieren 
+rechte Maustaste ordner -> tortoise git -> add to ignorelist 
+o only folder 
+o put .gitignore  in root 
+Ok
+
+5. Testen: git commit -> master  
+super -> nicht mehr da 
+
+.gitignore adden und committen 
+
+6. Testen: Fügen mal eine neue test.exe 
+
+7. Wird sie ignoriert -> git commit -> master 
+anschauen 
+```
+
+
+
+
+
+
+
+## Editoren / Editoren konfigurieren
+
+### Editoren RapiOS bzw. Raspian
+
+
+```
+#### Visual Studio Code 
+https://code.visualstudio.com/docs/setup/raspberry-pi
+GitUI 
+https://pi-apps.io 
+List of editors
+https://pi-apps.io/wiki/getting-started/apps-list/
+```
 
 ### Notepad++
 
@@ -1118,24 +1251,7 @@ git commit
 git push 
 ```
 
-## Extras 
-
-### Best practices
-
-
-  * Delete branches, not needed anymore 
-  * git merge --no-ff -> for merging local branches (to get a good history from local)
-  * from online: git pull --rebase // clean history from online, not to many branches 
-  * nur auf einem Arbeiten mit max. 2 Teilnehmern, wenn mehr feature-branch 
-  
-## Teil 2:
-
-  * Be careful with git commands that change history.
-    * never change commits, that have already been pushed 
-  * Choose workflow wisely 
-  * Avoid git push -f in any case // should not be possible 
-  * Disable possibility to push -f for branch or event repo 
-  
+## Mergetool
 
 ### Using a mergetool to solve conflicts
 
@@ -1183,6 +1299,47 @@ git config --global mergetool.keepBackup false
 ## when you have conflict you can open the mergetool (graphical tool with )
 git mergetool
 ```
+
+### Using tortoisegit as a mergetool to solve conflicts
+
+
+### Step 1: Install tortoisemerge 
+
+  * https://tortoisegit.org/download/
+
+### Step 2: Close git bash if open 
+
+### Step 3: Does git find merge 
+
+```
+git mergetool --tool-help
+```
+
+### Step 4: Setup tortoisemerge as mergetool 
+
+```
+git config --global merge.tool tortoisemerge 
+git config --global mergetool.keepBackup false
+```
+
+## Extras 
+
+### Best practices
+
+
+  * Delete branches, not needed anymore 
+  * git merge --no-ff -> for merging local branches (to get a good history from local)
+  * from online: git pull --rebase // clean history from online, not to many branches 
+  * nur auf einem Arbeiten mit max. 2 Teilnehmern, wenn mehr feature-branch 
+  
+## Teil 2:
+
+  * Be careful with git commands that change history.
+    * never change commits, that have already been pushed 
+  * Choose workflow wisely 
+  * Avoid git push -f in any case // should not be possible 
+  * Disable possibility to push -f for branch or event repo 
+  
 
 ### Overview GIT-Servers
 
@@ -1425,6 +1582,39 @@ git commit -am "removed submodules"
 
   * https://git-scm.com/book/de/v2/Git-Tools-Submodule
 
+## submodules in tortoisegit
+
+### submodules in tortoisegit
+
+
+
+
+### Exercise 2.1 submodule einbinden 
+
+```
+url: https://github.com/jmetzger/training-tortoisegit 
+branch: main 
+
+1. submodule add 
+https://github.com/jmetzger/training-tortoisegit 
+main 
+Path: training-tortoisegit 
+
+OK
+
+2. committed
+```
+
+### Exercise 2.2 Bibliothek aktualisieren 
+
+```
+1. Jochen: Online geändert 
+2. Änderung lokal übernehmen
+2.1 für den Ordner pull
+```
+
+2.2. Elternordner (Projekt training: commit) 
+
 ## Authentication 
 
 ### Work with different credentials
@@ -1493,6 +1683,18 @@ git push
 ## now you can merge in the merge-request interface on gitlab 
 
 ```
+
+## Documentation - .gitignore
+
+### List for different programming lanuages
+
+  * https://github.com/github/gitignore
+
+## Documentation - permissions
+
+### Permissions
+
+  * https://docs.gitlab.com/user/permissions/
 
 ## Documentation 
 
@@ -1589,3 +1791,5 @@ LANG=en_US.UTF-8
 ### gui uebersicht
 
   * https://git-scm.com/downloads/guis
+
+## testing submodules (v2)
