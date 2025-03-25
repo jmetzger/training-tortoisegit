@@ -4,6 +4,9 @@
 
   1. Geschichte / Grundlagen 
      * [GIT Pdf](http://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+
+  1. Daily work (best practices)
+     * [Best practices für daily work mit feature-branches](daily-work/overview.md)
     
   1. Installation / Nutzung (tortoisegit)
      * [Installation tortoisegit](tortoisegit/installation.md)
